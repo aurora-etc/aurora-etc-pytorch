@@ -15,7 +15,7 @@ AURORA-ETC is a lifelong learning framework for encrypted traffic classification
 - **Protocol-aware drift sensing** for proactive adaptation
 
 <p align="center">
-  <img src="assets/fig-model.png" width="600" alt="Model Overview">
+  <img src="assets/fig-model.png" width="100%" alt="Model Overview">
 </p>
 
 ## Features
