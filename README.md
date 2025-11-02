@@ -242,6 +242,41 @@ aurora-etc/
 ```
 
 
+## Download and prepare the datasets
+### 1. ISCX-VPN-NonVPN-2016
+* Download the following files from the link:
+http://205.174.165.80/CICDataset/ISCX-VPN-NonVPN-2016/Dataset/PCAPs/
+
+```
+1. NonVPN-PCAPs-01.zip
+2. NonVPN-PCAPs-02.zip
+3. NonVPN-PCAPs-03.zip
+4. VPN-PCAPS-01.zip
+5. VPN-PCAPS-02.zip
+```
+* Extract these following files in folder datasets/ISCX_VPN
+* Finally the dataset structure should look like:
+```
+-datasets
+ - ISCX_VPN
+  - aim_chat_3a.pcap
+  - aim_chat_3b.pcap
+	...
+  - youtubeHTML5_1.pcap
+  - vpn_aim_chat1a.pcap
+  - vpn_aim_chat1b.pcap
+	...
+  - vpn_youtube_A.pcap
+```
+
+### 2. ISCX-TOR
+### 3. CSTNET-TLS 1.3
+### 4. CESNET-QUIC22
+### 5. UCDavisQUIC
+### 6. WNL TLS
+
+
+
 ## Component Descriptions
 
 ### Models (`aurora_etc/models/`)
@@ -290,51 +325,6 @@ aurora-etc/
 3. **Lifelong Learning** (`scripts/run_lifelong.py`): Run continuous adaptation pipeline with drift detection and online updates
 
 
-## Datasets
-
-Supported datasets:
-- ISCX-VPN
-- ISCX-Tor
-- CSTNET-TLS 1.3
-- CESNET-QUIC22
-- UCDavisQUIC
-- WNL TLS
-
-
-
-
-## Download and prepare the datasets
-### 1. ISCX-VPN-NonVPN-2016
-* Download the following files from the link:
-http://205.174.165.80/CICDataset/ISCX-VPN-NonVPN-2016/Dataset/PCAPs/
-
-```
-1. NonVPN-PCAPs-01.zip
-2. NonVPN-PCAPs-02.zip
-3. NonVPN-PCAPs-03.zip
-4. VPN-PCAPS-01.zip
-5. VPN-PCAPS-02.zip
-```
-* Extract these following files in folder datasets/ISCX_VPN
-* Finally the dataset structure should look like:
-```
--datasets
- - ISCX_VPN
-  - aim_chat_3a.pcap
-  - aim_chat_3b.pcap
-	...
-  - youtubeHTML5_1.pcap
-  - vpn_aim_chat1a.pcap
-  - vpn_aim_chat1b.pcap
-	...
-  - vpn_youtube_A.pcap
-```
-
-### 2. ISCX-TOR
-### 3. CSTNET-TLS 1.3
-### 4. CESNET-QUIC22
-### 5. UCDavisQUIC
-### 6. WNL TLS
 
 ## Citation
 
