@@ -16,11 +16,10 @@ AURORA-ETC is a lifelong learning framework for encrypted traffic classification
 
 <p align="center">
   <img src="assets/fig-model.png" width="100%" alt="Model Overview">
+  <img src="assets/fig-self-supervised-learning.png" width="60%" alt="Self-Supervised Learning">
+  <img src="assets/fig-deploy.png" width="60%" alt="Model Overview">
 </p>
 
-<p align="center">
-  <img src="assets/fig-self-supervised-learning.png" width="70%" alt="Self-Supervised Learning">
-</p>
 
 ## Features
 
@@ -44,6 +43,10 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 # Install dependencies
 pip install -r requirements.txt
 ```
+
+<p align="center">
+  <img src="assets/fig-pre-performance.png" width="100%" alt="Results">
+</p>
 
 ## Quick Start
 
