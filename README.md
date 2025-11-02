@@ -270,7 +270,36 @@ http://205.174.165.80/CICDataset/ISCX-VPN-NonVPN-2016/Dataset/PCAPs/
 ```
 
 ### 2. ISCX-TOR
+* Download page (PCAPs + CSV flows): Canadian Institute for Cybersecurity (UNB) Tor-nonTor dataset page https://www.unb.ca/cic/datasets/tor.html
+* Extract into datasets/ISCX_TOR/
+* Final folder structure (example):
+
+```
+datasets/
+  ISCX_TOR/
+    tor_browsing.pcap
+    tor_email.pcap
+    tor_voip.pcap
+    nontor_browsing.pcap
+    nontor_chat.pcap
+    ...
+    flows/
+      TorNonTor-FlowMeter.csv   # if you use the provided CSV flows
+```
+
 ### 3. CSTNET-TLS 1.3
+* Download CSTNET-TLS 1.3 from the link referenced in ET-BERT's https://github.com/linwhitehat/ET-BERT.
+* Place/rename files to match the packet/*.tsv paths used by ET-BERT (its examples call these exact filenames). 
+```
+datasets/
+  CSTNET_TLS13/
+    packet/
+      train_dataset.tsv
+      valid_dataset.tsv
+      test_dataset.tsv
+      nolabel_test_dataset.tsv   # optional, if provided
+```
+
 ### 4. CESNET-QUIC22
 ### 5. UCDavisQUIC
 ### 6. WNL TLS
