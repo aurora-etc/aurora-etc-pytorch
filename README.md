@@ -18,6 +18,10 @@ AURORA-ETC is a lifelong learning framework for encrypted traffic classification
   <img src="assets/fig-model.png" width="100%" alt="Model Overview">
 </p>
 
+<p align="center">
+  <img src="assets/fig-self-supervised-learning.png" width="100%" alt="Self-Supervised Learning">
+</p>
+
 ## Features
 
 - Two-tier adaptation: Fast LoRA updates for moderate drift, AutoML reconfiguration for severe drift
@@ -30,7 +34,7 @@ AURORA-ETC is a lifelong learning framework for encrypted traffic classification
 
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/aurora-etc.git
+git clone https://github.com/aurora-etc/aurora-etc-pytorch.git
 cd aurora-etc
 
 # Create virtual environment
