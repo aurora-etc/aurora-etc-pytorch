@@ -396,6 +396,15 @@ datasets/
 3. **Lifelong Learning** (`scripts/run_lifelong.py`): Run continuous adaptation pipeline with drift detection and online updates
 
 
+## Results
+
+<details>
+<summary>Performance Table</summary>
+
+<!-- table here -->
+
+</details>
+
 
 ## Citation
 
