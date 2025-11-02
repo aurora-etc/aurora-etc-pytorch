@@ -19,7 +19,7 @@ AURORA-ETC is a lifelong learning framework for encrypted traffic classification
 </p>
 
 <p align="center">
-  <img src="assets/fig-self-supervised-learning.png" width="100%" alt="Self-Supervised Learning">
+  <img src="assets/fig-self-supervised-learning.png" width="70%" alt="Self-Supervised Learning">
 </p>
 
 ## Features
@@ -64,6 +64,12 @@ python scripts/finetune.py --config configs/finetune.yaml --pretrained_checkpoin
 ```bash
 python scripts/run_lifelong.py --config configs/lifelong.yaml
 ```
+
+<p align="center">
+  <img src="assets/results.png" width="100%" alt="Results">
+  <img src="assets/legends.png" width="100%" alt="Results">
+</p>
+
 
 ## Project Structure
 
