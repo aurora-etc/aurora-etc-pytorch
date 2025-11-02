@@ -301,9 +301,51 @@ datasets/
 ```
 
 ### 4. CESNET-QUIC22
-### 5. UCDavisQUIC
-### 6. WNL TLS
+* Download cesnet-quic22.zip (flows as CSV) and servicemap.csv from official dataset archive https://zenodo.org/records/10728760
+* The Zenodo page includes schema, size, and per-week stats. 
+* Extract into datasets/CESNET_QUIC22/
+* Final folder structure:
+```
+datasets/
+  CESNET_QUIC22/
+    cesnet-quic22/
+      week-2022-44.csv.gz
+      week-2022-45.csv.gz
+      week-2022-46.csv.gz
+      week-2022-47.csv.gz
+      dataset-statistics/...
+    servicemap.csv
+```
 
+### 5. UCDavisQUIC
+* Download Kaggle "UCDavisQUIC" (per-flow PCAPs organized by service) https://www.kaggle.com/datasets/guillaumefraysse/ucdavisquic?utm_source=chatgpt.com
+* Extract into datasets/UCDAVIS_QUIC/
+* Final folder structure:
+```
+datasets/
+  UCDAVIS_QUIC/
+    GoogleDocs/
+      flow_00001.pcap
+      ...
+    GoogleDrive/
+    GoogleMusic/
+    GoogleSearch/
+    YouTube/
+```
+
+### 6. WNL TLS
+* Dataset datatset from "Novel QoS-aware TLS Dataset for Encrypted Traffic Classification" at https://wnlab.ru/qos-tls-dataset-of-enc-traffic/?utm_source=chatgpt.com
+* Describes 3,547 flows across 12 services and 4 traffic types.
+* Extract into datasets/WNL_TLS/
+* Final folder structure (example):
+```
+datasets/
+  WNL_TLS/
+    raw_pcaps/
+      service_A_*.pcap
+      ...
+    labels.csv          # if provided with service/type labels
+```
 
 
 ## Component Descriptions
