@@ -230,6 +230,55 @@ aurora-etc/
 └── .gitignore                    # Git ignore rules
 ```
 
+
+## Component Descriptions
+
+### Models (`aurora_etc/models/`)
+
+- **encoder.py**: Transformer-based session encoder that processes encrypted traffic flows
+- **lora.py**: Low-Rank Adaptation implementation for parameter-efficient fine-tuning
+- **classifier.py**: Classification head with optional cosine similarity and margin-based loss
+- **transformers.py**: Transformer building blocks (positional encoding, transformer blocks)
+
+### Data Processing (`aurora_etc/data/`)
+
+- **datasets.py**: PyTorch Dataset classes for encrypted traffic
+- **preprocessing.py**: Flow preprocessing and feature extraction
+- **transforms.py**: Data augmentation (cropping, jittering, masking) for self-supervised learning
+
+### Drift Detection (`aurora_etc/drift/`)
+
+- **detector.py**: Unified drift detector combining MMD, ECE, uncertainty, and protocol telemetry
+- **mmd.py**: Maximum Mean Discrepancy computation for feature drift detection
+- **calibration.py**: Expected Calibration Error for confidence drift detection
+
+### Training (`aurora_etc/training/`)
+
+- **losses.py**: Loss functions including InfoNCE contrastive loss, masked modeling loss, and knowledge distillation
+- **trainer.py**: Training loops for pretraining and online updates
+- **replay_buffer.py**: Replay buffer implementation for catastrophic forgetting prevention
+
+### AutoML (`aurora_etc/automl/`)
+
+- **searcher.py**: AutoML-guided reconfiguration using Bayesian optimization (Optuna)
+- **search_space.py**: Architecture search space definition
+
+### Deployment (`aurora_etc/deployment/`)
+
+- **pipeline.py**: Staged deployment pipeline (shadow → canary → full rollout) with SLO monitoring
+
+### Utilities (`aurora_etc/utils/`)
+
+- **metrics.py**: Evaluation metrics (macro-F1, BWT, FWT, OOD AUROC)
+- **logging.py**: Logging setup and utilities
+
+## Workflow
+
+1. **Pretraining** (`scripts/pretrain.py`): Train session encoder on unlabeled traffic using self-supervised learning
+2. **Fine-tuning** (`scripts/finetune.py`): Fine-tune encoder and train classifier on labeled data
+3. **Lifelong Learning** (`scripts/run_lifelong.py`): Run continuous adaptation pipeline with drift detection and online updates
+
+
 ## Datasets
 
 Supported datasets:
