@@ -1,0 +1,33 @@
+# Fine-tuning configuration
+model:
+  encoder_checkpoint: "checkpoints/pretrained/encoder.pt"
+  num_classes: 12  # Adjust based on dataset
+  use_lora: true
+  lora_rank: 8
+  lora_alpha: 16
+
+classifier:
+  hidden_dim: 128
+  dropout: 0.1
+  use_cosine: false
+
+training:
+  batch_size: 32
+  num_epochs: 100
+  learning_rate: 1e-4
+  weight_decay: 1e-5
+  warmup_epochs: 5
+  gradient_clip: 1.0
+  early_stopping_patience: 15
+
+data:
+  train_path: "data/train"
+  val_path: "data/val"
+  test_path: "data/test"
+
+output:
+  checkpoint_dir: "checkpoints/finetuned"
+  log_dir: "logs/finetune"
+
+device: "cuda"
+

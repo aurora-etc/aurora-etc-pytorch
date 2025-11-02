@@ -1,0 +1,60 @@
+# Lifelong learning configuration
+model:
+  encoder_checkpoint: "checkpoints/finetuned/encoder.pt"
+  classifier_checkpoint: "checkpoints/finetuned/classifier.pt"
+  num_classes: 12
+  use_lora: true
+  lora_rank: 8
+  lora_alpha: 16
+
+drift:
+  tau1: 0.5  # Moderate drift threshold
+  tau2: 0.7  # Severe drift threshold
+  w1: 0.3    # MMD weight
+  w2: 0.2    # Uncertainty weight
+  w3: 0.2    # ECE weight
+  w4: 0.3    # Protocol telemetry weight
+  n_bins: 15
+  update_interval: 86400  # 24 hours in seconds
+
+replay:
+  buffer_size: 25000
+  selection_strategy: "uncertainty"
+  refresh_ratio: 0.7
+
+online_update:
+  batch_size: 32
+  learning_rate: 1e-4
+  alpha: 0.5  # Replay loss weight
+  beta: 0.1   # Regularization weight
+  uncertainty_threshold: 0.8
+
+automl:
+  max_trials: 30
+  latency_constraint: 2.62  # p99 latency in ms
+  memory_constraint: 2.4    # Memory in GB
+  throughput_constraint: 242.4  # Flows per second
+  search_space:
+    lora_ranks: [4, 8, 16]
+    hidden_dims: [256, 512, 768]
+    num_heads_list: [4, 8, 12]
+    head_widths: [64, 128, 256]
+    head_depths: [1, 2, 3]
+
+deployment:
+  shadow_ratio: 0.0
+  canary_ratio: 0.01
+  slo_latency_p99: 3.0
+  slo_accuracy: 0.85
+  slo_min_requests: 1000
+
+data:
+  data_path: "data/lifelong"
+  window_size: 7  # days
+
+output:
+  checkpoint_dir: "checkpoints/lifelong"
+  log_dir: "logs/lifelong"
+
+device: "cuda"
+

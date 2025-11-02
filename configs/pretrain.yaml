@@ -1,0 +1,44 @@
+# Pretraining configuration
+model:
+  input_dim: 3
+  d_model: 512
+  nhead: 8
+  num_layers: 6
+  dim_feedforward: 2048
+  dropout: 0.1
+  max_seq_len: 256
+  use_lora: false  # No LoRA during pretraining
+
+training:
+  batch_size: 256
+  num_epochs: 500
+  learning_rate: 5e-4
+  weight_decay: 1e-5
+  warmup_epochs: 5
+  gradient_clip: 1.0
+  early_stopping_patience: 15
+
+loss:
+  alpha: 0.5  # Contrastive loss weight
+  beta: 0.5   # Masked modeling loss weight
+  temperature: 0.07
+
+data:
+  train_path: "data/train"
+  val_path: "data/val"
+  max_packets: 256
+
+augmentation:
+  crop_prob: 0.5
+  crop_ratio: [0.7, 1.0]
+  jitter_prob: 0.5
+  jitter_std: 0.1
+  mask_prob: 0.15
+  mask_ratio: 0.2
+
+output:
+  checkpoint_dir: "checkpoints/pretrained"
+  log_dir: "logs/pretrain"
+
+device: "cuda"
+
