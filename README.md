@@ -14,13 +14,17 @@ AURORA-ETC is a lifelong learning framework for encrypted traffic classification
 - **AutoML-guided reconfiguration** for severe drift scenarios
 - **Protocol-aware drift sensing** for proactive adaptation
 
+<p align="center">
+  <img src="assets/fig-model.png" width="600" alt="Model Overview">
+</p>
+
 ## Features
 
-- 🎯 Two-tier adaptation: Fast LoRA updates for moderate drift, AutoML reconfiguration for severe drift
-- 🔄 Continual learning with minimal catastrophic forgetting
-- 📊 Multi-signal drift detection (MMD, ECE, protocol telemetry)
-- ⚡ Resource-efficient: Low latency, high throughput, minimal memory overhead
-- 🔒 Privacy-preserving: Works on encrypted traffic features without payload inspection
+- Two-tier adaptation: Fast LoRA updates for moderate drift, AutoML reconfiguration for severe drift
+- Continual learning with minimal catastrophic forgetting
+- Multi-signal drift detection (MMD, ECE, protocol telemetry)
+- Resource-efficient: Low latency, high throughput, minimal memory overhead
+- Privacy-preserving: Works on encrypted traffic features without payload inspection
 
 ## Installation
 
@@ -93,7 +97,7 @@ If you use this code in your research, please cite:
 ```bibtex
 @article{aurora-etc2025,
   title={AURORA-ETC: Lifelong Encrypted Traffic Classification through Self-Supervised Pretraining and AutoML-Guided Adaptation},
-  author={Fardous, Shamaila and Sharif, Kashif and Li, Fan and Manjotho, Ali Asghar},
+  author={},
   journal={IEEE Transactions on Dependable and Secure Computing},
   year={2025}
 }
@@ -102,8 +106,4 @@ If you use this code in your research, please cite:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-This implementation is based on the paper "AURORA-ETC: Lifelong Encrypted Traffic Classification through Self-Supervised Pretraining and AutoML-Guided Adaptation".
 
