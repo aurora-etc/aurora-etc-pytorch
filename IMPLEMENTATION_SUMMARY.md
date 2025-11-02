@@ -236,7 +236,7 @@ If you use this implementation, please cite the original paper:
 ```bibtex
 @article{aurora-etc2025,
   title={AURORA-ETC: Lifelong Encrypted Traffic Classification through Self-Supervised Pretraining and AutoML-Guided Adaptation},
-  author={Fardous, Shamaila and Sharif, Kashif and Li, Fan and Manjotho, Ali Asghar},
+  author={},
   journal={IEEE Transactions on Dependable and Secure Computing},
   year={2025}
 }
