@@ -217,28 +217,3 @@ updater = OnlineUpdater(encoder, classifier, device, replay_buffer)
 # (See scripts/run_lifelong.py for complete example)
 ```
 
-## Dependencies
-
-See `requirements.txt` for full list. Key dependencies:
-- PyTorch >= 2.4.0
-- Optuna >= 3.5.0 (for AutoML)
-- NumPy, SciPy
-- scikit-learn
-
-## License
-
-MIT License - see LICENSE file
-
-## Citation
-
-If you use this implementation, please cite the original paper:
-
-```bibtex
-@article{aurora-etc2025,
-  title={AURORA-ETC: Lifelong Encrypted Traffic Classification through Self-Supervised Pretraining and AutoML-Guided Adaptation},
-  author={},
-  journal={IEEE Transactions on Dependable and Secure Computing},
-  year={2025}
-}
-```
-
